@@ -1,0 +1,17 @@
+.tab{
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 30px;
+    margin:0px 30px;
+    &:hover{
+        color:blue;
+    }
+    &:disabled{
+        color:rgb(220, 220, 220);
+    }
+}
+.active{
+    border-bottom:2px solid black;
+}
