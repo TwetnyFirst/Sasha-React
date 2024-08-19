@@ -3,7 +3,7 @@ import { useState } from 'react';
 import {data} from '../../data.ts';
 import './SmallCard.scss';
 
-function SmallCard() {
+function SmallCard({content}) {
 
     const [like,setLike] = useState("fa-regular fa-thumbs-up");
     const [dislike,setDislike] = useState("fa-regular fa-thumbs-down");
@@ -13,12 +13,12 @@ function SmallCard() {
         <div className="smallCard-wrap">
             <div className="card__main">
                 <div className="main__left">
-                    <div className="main__left__date">{data.date}</div>
-                    <h3 className="main__left__title">{data.title}</h3>
+                    <div className="main__left__date">{content.date}</div>
+                    <h3 className="main__left__title">{content.title}</h3>
                 </div>
                 <div className="main__right">
                     <div className="card__img-wrap">
-                        <img src={data.image} alt="img"/>
+                        <img src={content.image} alt="img"/>
                     </div>
                 </div>
             </div>

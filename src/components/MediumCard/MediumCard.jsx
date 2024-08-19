@@ -3,7 +3,7 @@ import { useState } from 'react';
 import {data} from '../../data.ts';
 import './MediumCard.scss';
 
-function MediumCard() {
+function MediumCard({content}) {
 
     const [like,setLike] = useState("fa-regular fa-thumbs-up");
     const [dislike,setDislike] = useState("fa-regular fa-thumbs-down");
@@ -13,10 +13,10 @@ function MediumCard() {
         <div className="mediumCard-wrap">
             <div className="card__main">
                     <div className="card__img-wrap">
-                        <img src={data.image} alt="img"/>
+                        <img src={content.image} alt="img"/>
                     </div>
-                    <div className="main__date">{data.date}</div>
-                    <h3 className="main__title">{data.title}</h3>
+                    <div className="main__date">{content.date}</div>
+                    <h3 className="main__title">{content.title}</h3>
             </div>
             <div className="card__social">
                 <div className="card__social__left">

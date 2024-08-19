@@ -3,13 +3,20 @@
     .pages__left{
         width: 736px;
         margin-right: 32px;
-        .mediumCards{
-            margin-top: 40px;
+        .mediumCards-wrap{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            .mediumCard{
+                margin-top: 40px;
+            
+            }
+
         }
     }
     .pages__right{
+        .right__item{
+            margin-bottom: 40px;       
+        }
     }
 }
