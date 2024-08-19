@@ -1,6 +1,5 @@
 
 import { useState } from 'react';
-import {data} from '../../data.ts';
 import './SmallCard.scss';
 
 function SmallCard({content}) {

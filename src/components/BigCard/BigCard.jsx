@@ -1,6 +1,5 @@
 
 import { useState } from 'react';
-import {data} from '../../data.ts';
 import './BidCard.scss';
 
 type TContent ={
