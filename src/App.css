@@ -5,4 +5,19 @@
     list-style: none;
     box-sizing: border-box;
     scrollbar-width: none;
+    
+}
+body{
+    background-color:rgb(56, 56, 56);
+
+}
+.container{
+    max-width:1170px;
+    margin: auto;
+}
+.title{
+    margin:40px 0px;
+}
+.tabs{
+    margin-bottom: 64px;
 }

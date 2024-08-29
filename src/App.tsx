@@ -2,20 +2,23 @@ import React from 'react';
 import './App.css';
 import Title from './components/Title/Title.jsx';
 import Tabs from './components/Tabs/Tabs';
-import BigCard from './components/BigCard/BigCard';
-import MediumCard from './components/MediumCard/MediumCard'
-import SmallCard from './components/SmallCard/SmallCard';
 import ListOfPosts from './pages/ListOfPosts/ListOfPosts';
+import Header from './components/Header/Header';
+import MainTemplate from './Templates/MainTemplate';
 
 function App() {
   return (
     <>
-    <Tabs></Tabs> 
-    <Title content='Sing In' ></Title>
-    {/* <BigCard></BigCard>
-    <MediumCard></MediumCard>
-    <SmallCard></SmallCard> */}
-    <ListOfPosts></ListOfPosts>
+    {/* <Header></Header>
+    <div className="container">
+      
+      <div className="title"> <Title content='Sing In'></Title> </div>
+      <div className="tabs"> <Tabs></Tabs> </div>
+      <ListOfPosts></ListOfPosts>
+    </div> */}
+
+    <MainTemplate></MainTemplate>
+    
     </>
   );
 }
