@@ -7,10 +7,10 @@
     scrollbar-width: none;
     
 }
-body{
+/* body{
     background-color:rgb(56, 56, 56);
 
-}
+} */
 .container{
     max-width:1170px;
     margin: auto;

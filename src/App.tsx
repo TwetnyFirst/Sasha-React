@@ -5,20 +5,23 @@ import Tabs from './components/Tabs/Tabs';
 import ListOfPosts from './pages/ListOfPosts/ListOfPosts';
 import Header from './components/Header/Header';
 import MainTemplate from './Templates/MainTemplate';
+import Footer from './components/Footer/Footer';
+import SelectedPost from './components/SeletedPost/SelectedPost';
 
 function App() {
   return (
     <>
-    {/* <Header></Header>
+    <Header></Header>
     <div className="container">
       
       <div className="title"> <Title content='Sing In'></Title> </div>
       <div className="tabs"> <Tabs></Tabs> </div>
-      <ListOfPosts></ListOfPosts>
-    </div> */}
+      {/* <ListOfPosts></ListOfPosts> */}
+      <SelectedPost></SelectedPost>
+      <Footer></Footer>
+    </div>
 
-    <MainTemplate></MainTemplate>
-    
+    {/* <MainTemplate></MainTemplate> */}
     </>
   );
 }
