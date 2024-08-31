@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Title.scss';
+import { ThemeContext } from '../../Providers/ThemeContext';
 interface ITitle{
     content:string;
 }
 function Title({content}:ITitle) {
+  const [color,setColor] = useContext(ThemeContext);
+
   return (
-    <h1>{content}</h1>
+    <h1 className={`title-${color}`}>{content}</h1>
   );
 }
 

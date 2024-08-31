@@ -3,10 +3,15 @@ import BigCard from '../../components/BigCard/BigCard';
 import MediumCard from '../../components/MediumCard/MediumCard';
 import SmallCard from '../../components/SmallCard/SmallCard';
 import {data} from '../../data.ts'
+import { ThemeContext } from '../../Providers/ThemeContext';
+import { useContext } from 'react';
 
 function ListOfPosts() {
+
+const [color,setColor] = useContext(ThemeContext);
+
     return ( 
-        <section className="listOfPosts">
+        <section className={`listOfPosts-${color}`}>
             <div className="pages__left">
                 <BigCard content={data[0]} text='test'></BigCard>
                 <div className="mediumCards-wrap">

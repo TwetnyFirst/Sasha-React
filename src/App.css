@@ -7,10 +7,6 @@
     scrollbar-width: none;
     
 }
-/* body{
-    background-color:rgb(56, 56, 56);
-
-} */
 .container{
     max-width:1170px;
     margin: auto;
@@ -20,4 +16,18 @@
 }
 .tabs{
     margin-bottom: 64px;
+}
+
+
+/* //Темный бэкграунд для root */
+.root-dark{
+    background-color:#313037;
+    transition: 0.3s;
+
+}
+.root-light{
+    background-color:white;
+    transition: 0.3s;
+
+
 }

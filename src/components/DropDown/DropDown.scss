@@ -1,4 +1,4 @@
-.dropdown {
+.dropdown-light {
     width: 200px;
     display: flex;
     flex-direction: column;
@@ -7,6 +7,8 @@
     border: 1px solid grey;
     position: absolute;
     background-color: white;
+    transition: 0.3s;
+
 }
 
 .dropdown-item {
@@ -32,4 +34,19 @@
 
 .dropdown-icon {
     font-size: 20px;
+}
+
+/* ---------- Dark Theme */
+
+.dropdown-dark {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid grey;
+    position: absolute;
+    background-color: #313037;
+    color:white;
+    transition: 0.3s;
 }

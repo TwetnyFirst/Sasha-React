@@ -1,22 +1,29 @@
-.listOfPosts{
+.listOfPosts-light{
     display: flex;
-    .pages__left{
-        width: 736px;
-        margin-right: 32px;
-        .mediumCards-wrap{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            .mediumCard{
-                margin-top: 40px;
-            
-            }
-
-        }
+    
     }
     .pages__right{
-        .right__item{
-            margin-bottom: 40px;       
-        }
+        
     }
+.pages__left{
+width: 736px;
+margin-right: 32px;
+}
+.mediumCards-wrap{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+.mediumCard{
+    margin-top: 40px;
+}
+.right__item{
+    margin-bottom: 40px;       
+}
+
+
+//dark theme
+.listOfPosts-dark{
+    display: flex;
+    color:white;
 }
