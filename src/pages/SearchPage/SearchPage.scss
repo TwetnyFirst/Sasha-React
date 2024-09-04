@@ -1,0 +1,15 @@
+.serch-item{
+    margin-bottom: 40px;
+    .smallCard-wrap{
+        .card__main{
+            flex-direction: row-reverse;
+            justify-content:start;
+            .main__right{
+                margin-right: 40px;
+            }
+
+        }
+    }
+
+
+}
