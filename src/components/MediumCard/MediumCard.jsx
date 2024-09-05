@@ -12,9 +12,9 @@ function MediumCard({content}) {
         <div className="mediumCard-wrap">
             <div className="card__main">
                     <div className="card__img-wrap">
-                        <img src={content.image} alt="img"/>
+                        <img src={content.url} alt="img"/>
                     </div>
-                    <div className="main__date">{content.date}</div>
+                    <div className="main__date">{content.id}</div>
                     <h3 className="main__title">{content.title}</h3>
             </div>
             <div className="card__social">

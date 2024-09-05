@@ -9,6 +9,7 @@ import MainTemplate from './Templates/MainTemplate';
 import Footer from './components/Footer/Footer';
 import SelectedPost from './components/SeletedPost/SelectedPost';
 import SearchPage from './pages/SearchPage/Searchpage';
+import { BrowserRouter, Route,Routes } from 'react-router-dom';
 
 function App() {
 
@@ -17,14 +18,19 @@ function App() {
   return (
     <>
     <Theme>
-    <Header></Header>
-    <div className="container">
-      <div className="title"> <Title content='Sing In'></Title> </div>
-      <div className="tabs"> <Tabs></Tabs> </div>
-      <ListOfPosts></ListOfPosts>
-      <Footer></Footer>
-    </div>
-    <SearchPage></SearchPage>
+    <BrowserRouter>
+      <Header></Header>
+      <Tabs></Tabs>
+      <Routes>
+        <Route path='/' element={<MainTemplate></MainTemplate>}/>
+        <Route path='/listOfPosts' element={<ListOfPosts></ListOfPosts>}/>
+        <Route path='/ListOfPosts/:id' element={<SelectedPost></SelectedPost>}/>
+
+
+
+      </Routes>
+    </BrowserRouter>
+
     </Theme>
     </>
   );

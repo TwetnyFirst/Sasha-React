@@ -17,19 +17,18 @@ function BidCard({content}) {
     const [like,setLike] = useState("fa-regular fa-thumbs-up");
     const [dislike,setDislike] = useState("fa-regular fa-thumbs-down");
     const [save,setSave] = useState("fa-regular fa-bookmark");
-    console.log(content);
-
+    
     return ( 
         <div className="bigCard-wrap">
             <div className="card__main">
                 <div className="main__left">
-                    <div className="main__left__date">{content.date}</div>
+                    <div className="main__left__date">{content.id}</div>
                     <h3 className="main__left__title">{content.title}</h3>
-                    <div className="main__left__text">{content.text} </div>
+                    <div className="main__left__text">{content.thumbnailUrl} </div>
                 </div>
                 <div className="main__right">
                     <div className="card__img-wrap">
-                        <img src={content.image} alt="img"/>
+                        <img src={content.url} alt="img"/>
                     </div>
                 </div>
             </div>

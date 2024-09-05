@@ -3,20 +3,21 @@
     margin: 0 auto;
 }
 
-.container-title {
+.container-title-light {
     font-family: "Inter";
     font-size: 56px;
     font-weight: 700;
     line-height: 80px;
     padding-top: 80px;
 }
+.container-title-dark {
+    font-family: "Inter";
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 80px;
+    padding-top: 80px;
+    color: white;
 
-.dark-title {
-    color: beige;
-}
-
-.ligth-title {
-    color: rgb(0, 0, 0);
 }
 
 .container-photo {
@@ -27,10 +28,18 @@
     margin: 30px auto;
 }
 
-.container-desription {
+.container-desription-light {
     width: 922px;
     margin: 0 auto;
     font-family: Inter;
     font-size: 18px;
     line-height: 32px;
+}
+.container-desription-dark {
+    width: 922px;
+    margin: 0 auto;
+    font-family: Inter;
+    font-size: 18px;
+    line-height: 32px;
+    color:white;
 }
