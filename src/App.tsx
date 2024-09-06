@@ -13,7 +13,7 @@ import { BrowserRouter, Route,Routes } from 'react-router-dom';
 
 function App() {
 
-  
+
 
   return (
     <>
@@ -25,10 +25,9 @@ function App() {
         <Route path='/' element={<MainTemplate></MainTemplate>}/>
         <Route path='/listOfPosts' element={<ListOfPosts></ListOfPosts>}/>
         <Route path='/ListOfPosts/:id' element={<SelectedPost></SelectedPost>}/>
-
-
-
+        <Route path='/SearchPage' element={<SearchPage></SearchPage>} />
       </Routes>
+      <Footer></Footer>
     </BrowserRouter>
 
     </Theme>

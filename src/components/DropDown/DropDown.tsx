@@ -1,16 +1,19 @@
 import {useContext} from 'react';
 import './DropDown.scss';
 import {ThemeContext} from '../../Providers/ThemeContext';
+import { useNavigate } from 'react-router-dom';
 
 function DropDown() {
 
     const [color,setColor] = useContext(ThemeContext);
 
+    const homeNav = useNavigate();
+
     const root = document.getElementById('root');
 
     return ( <>
         <div className={`dropdown-${color}`}>
-            <div className='dropdown-item'>Home</div>
+            <div onClick={() => homeNav('/')} className='dropdown-item'>Home</div>
             <div className='dropdown-item'>
                 <div onClick={() => {
                     setColor('light')

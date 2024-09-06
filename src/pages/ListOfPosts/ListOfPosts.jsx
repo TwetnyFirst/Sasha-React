@@ -26,7 +26,7 @@ useEffect(() => {
                 {posts.length === 0 ? null : <BigCard content={posts[0]} text='test'></BigCard>}
                 <div className="mediumCards-wrap">
                     {posts.length === 0 ? null : posts.map((item) => <>
-                    <Link to={`/listOfPosts/${item.id}`}> 
+                    <Link key={item.id} to={`/listOfPosts/${item.id}`}> 
                         <div className="mediumCard">
                             <MediumCard content={item}></MediumCard>
                         </div>
@@ -36,7 +36,7 @@ useEffect(() => {
             </div>
             <div className="pages__right">
                 {posts.length === 0 ? null : posts.map((item) => <>
-                    <Link to={`/listOfPosts/${item.id}`}> 
+                    <Link key={item.id} to={`/listOfPosts/${item.id}`}> 
                         <div className="right__item">
                             <SmallCard content={item}></SmallCard>
                         </div>

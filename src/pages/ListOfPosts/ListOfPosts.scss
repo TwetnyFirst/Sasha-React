@@ -1,10 +1,13 @@
 .listOfPosts-light{
     display: flex;
-    
+    transition: 0.3s;
+    a{
+        color:black;
     }
-    .pages__right{
+    }
+.pages__right{
         
-    }
+}
 .pages__left{
 width: 736px;
 margin-right: 32px;
@@ -26,7 +29,9 @@ justify-content: space-between;
 .listOfPosts-dark{
     display: flex;
     color:white;
-}
-a{
-    color:black;
+    transition: 0.3s;
+
+    a{
+        color:white;
+    }
 }

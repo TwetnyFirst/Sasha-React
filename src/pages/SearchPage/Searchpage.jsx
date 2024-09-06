@@ -9,7 +9,6 @@ import {data} from '../../data.ts';
 function SearchPage() {
     return ( 
         <>
-        <Header></Header>
         
 
         <div className="container">
@@ -23,8 +22,6 @@ function SearchPage() {
         <div className="serch-item"><SmallCard content={data[0]}></SmallCard></div>
         <div className="serch-item"><SmallCard content={data[0]}></SmallCard></div>
 
-
-        <Footer></Footer>
 
         </div>
         </>
