@@ -6,11 +6,10 @@ import SmallCard from '../../components/SmallCard/SmallCard';
 import {data} from '../../data.ts';
 
 
-function SearchPage() {
+function SearchPage({}) {
     return ( 
         <>
         
-
         <div className="container">
 
         <div className="title"><Title content='Search Page'></Title></div>
