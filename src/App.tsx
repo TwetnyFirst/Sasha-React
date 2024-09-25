@@ -22,9 +22,9 @@ function App() {
       <Header></Header>
       <Tabs></Tabs>
       <Routes>
-        <Route path='/' element={<MainTemplate></MainTemplate>}/>
-        <Route path='/listOfPosts' element={<ListOfPosts></ListOfPosts>}/>
-        <Route path='/ListOfPosts/:id' element={<SelectedPost></SelectedPost>}/>
+        {/* <Route path='/' element={<MainTemplate></MainTemplate>}/> */}
+        <Route path='/' element={<ListOfPosts></ListOfPosts>}/>
+        <Route path='/:id' element={<SelectedPost></SelectedPost>}/>
         <Route path='/SearchPage' element={<SearchPage></SearchPage>} />
       </Routes>
       <Footer></Footer>

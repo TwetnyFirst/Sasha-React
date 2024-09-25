@@ -23,10 +23,10 @@ useEffect(() => {
         <div className="container">
         <section className={`listOfPosts-${color}`}>
             <div className="pages__left">
-                {posts.length === 0 ? null : <BigCard content={posts[0]} text='test'></BigCard>}
+                {posts.length === 0 ? null : <BigCard key={posts[0].id} content={posts[0]} text='test'></BigCard>}
                 <div className="mediumCards-wrap">
                     {posts.length === 0 ? null : posts.map((item) => <>
-                    <Link key={item.id} to={`/listOfPosts/${item.id}`}> 
+                    <Link key={item.id} to={`/${item.id}`}> 
                         <div className="mediumCard">
                             <MediumCard content={item}></MediumCard>
                         </div>
@@ -36,7 +36,7 @@ useEffect(() => {
             </div>
             <div className="pages__right">
                 {posts.length === 0 ? null : posts.map((item) => <>
-                    <Link key={item.id} to={`/listOfPosts/${item.id}`}> 
+                    <Link key={item.id} to={`/${item.id}`}> 
                         <div className="right__item">
                             <SmallCard content={item}></SmallCard>
                         </div>

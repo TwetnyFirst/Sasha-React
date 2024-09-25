@@ -10,7 +10,7 @@ function Tabs() {
     return (  
         <div className="tabs-wrap">
             <Link to='/'><Tab content='Main' tabClass={`tab-${color} active`} isDisabled={false}></Tab></Link>
-            <Link to='/listOfPosts'><Tab content='ListOfPosts' tabClass={`tab-${color}`} isDisabled={false}></Tab></Link>
+            {/* <Link to='/listOfPosts'><Tab content='ListOfPosts' tabClass={`tab-${color}`} isDisabled={false}></Tab></Link> */}
             
             
             <Tab content='Popular' tabClass={`tab-${color}`} isDisabled={true}></Tab>

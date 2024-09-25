@@ -13,11 +13,15 @@ function Header() {
     const searchNav = useNavigate();
 
 
+
     return ( <>
     <header className='header'>
+
         <div onClick={() => setIsDropdownOpen(!isDropdownOpen)} className='header-left search-icon'>            
             {isDropdownOpen ? <i className="fa-solid fa-xmark my-icon"></i> : <i className="fa-solid fa-bars my-icon"></i>}
         </div>
+
+        {/* Search */}
         {isSearchOpen === false ? null : <div className="header__search">
             <input type="text" placeholder='Search...'/>
             <i onClick={() => setIsSearchOpen(false)} className='fa-solid fa-xmark'></i>
