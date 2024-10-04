@@ -4,8 +4,9 @@ import MediumCard from '../../components/MediumCard/MediumCard';
 import SmallCard from '../../components/SmallCard/SmallCard';
 import { ThemeContext } from '../../Providers/ThemeContext';
 import { useContext, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { addToFavorites } from '../../slice/posts'; 
+import { fetchPosts } from '../../slice/posts';
 
 function ListOfPosts() {
 
@@ -13,37 +14,45 @@ const [color,setColor] = useContext(ThemeContext);
 
 const [posts,setPosts] = useState([]);
 
+const dispatch = useDispatch();
+
+let postsArr = useSelector((state) => state.posts);
+
 useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/photos')
-            .then(response => response.json())
-            .then(json => setPosts(json))
-});
+
+    dispatch(fetchPosts());
+},[dispatch]);
+
+
 
     return ( 
         <div className="container">
-        <section className={`listOfPosts-${color}`}>
-            <div className="pages__left">
-                {posts.length === 0 ? null : <BigCard key={posts[0].id} content={posts[0]} text='test'></BigCard>}
-                <div className="mediumCards-wrap">
-                    {posts.length === 0 ? null : posts.map((item) => <>
-                    <Link key={item.id} to={`/${item.id}`}> 
-                        <div className="mediumCard">
-                            <MediumCard content={item}></MediumCard>
-                        </div>
-                    </Link>
-                    </> ).slice(1,5)}
+        {postsArr.activeTab === 'all' 
+        ? <section className={`listOfPosts-${color}`}>
+        <div className="pages__left">
+            {postsArr.posts.length !== 0 ? <BigCard key={postsArr.posts[0].id} content={postsArr.posts[0]} text='test'></BigCard> : null}
+            <div className="mediumCards-wrap">
+                {postsArr.posts.length === 0 ? null : postsArr.posts.map((item) => 
+                <>
+                <div className="mediumCard">
+                    <MediumCard content={item}></MediumCard>
                 </div>
+                </> ).slice(1,5)}
             </div>
-            <div className="pages__right">
-                {posts.length === 0 ? null : posts.map((item) => <>
-                    <Link key={item.id} to={`/${item.id}`}> 
-                        <div className="right__item">
-                            <SmallCard content={item}></SmallCard>
-                        </div>
-                    </Link>
-                </> ).slice(6,12)}
+        </div>
+        <div className="pages__right">
+            {postsArr.posts.length === 0 ? null : postsArr.posts.map((item) => 
+            <>
+            <div className="right__item">
+                <SmallCard content={item}></SmallCard>
             </div>
-        </section>
+            </> ).slice(6,12)}
+        </div>
+    </section>
+        : postsArr.favorites.map((item) => <MediumCard content={item}></MediumCard> ) }
+        
+
+
         </div>
      );
 }

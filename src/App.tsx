@@ -10,6 +10,7 @@ import Footer from './components/Footer/Footer';
 import SelectedPost from './components/SeletedPost/SelectedPost';
 import SearchPage from './pages/SearchPage/Searchpage';
 import { BrowserRouter, Route,Routes } from 'react-router-dom';
+import FavoritesPage from './pages/FavoritesPage/favoritesPage';
 
 function App() {
 
@@ -23,9 +24,10 @@ function App() {
       <Tabs></Tabs>
       <Routes>
         {/* <Route path='/' element={<MainTemplate></MainTemplate>}/> */}
-        <Route path='/' element={<ListOfPosts></ListOfPosts>}/>
-        <Route path='/:id' element={<SelectedPost></SelectedPost>}/>
-        <Route path='/SearchPage' element={<SearchPage></SearchPage>} />
+        <Route path='/' element={<ListOfPosts/>}/>
+        <Route path='/:id' element={<SelectedPost/>}/>
+        <Route path='/SearchPage' element={<SearchPage/>} />
+        {/* <Route path='/Favorites' element={<FavoritesPage/>} /> */}
       </Routes>
       <Footer></Footer>
     </BrowserRouter>
@@ -36,3 +38,4 @@ function App() {
 }
 
 export default App;
+
